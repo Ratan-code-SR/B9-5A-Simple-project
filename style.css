@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+.raleway{
+    font-family: "Raleway", sans-serif;
+}
+.inter{
+    font-family: "Inter", sans-serif;
+}
+.hero{
+    background: url(images/banner.png);
+    height: 500px;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    width: 100%;
+}
