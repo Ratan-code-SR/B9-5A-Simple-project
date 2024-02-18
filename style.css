@@ -28,18 +28,36 @@
     padding: 12px;
     border-radius: 10px;
 }
-.driver-style {
-    background-color: #eaebec;
-    padding:10px 45px;
+
+.add-style {
+    background-color: green;
+    width: 120px;
+    padding: 12px;
     border-radius: 10px;
 }
-.border-style{
+
+.driver-style {
+    background-color: #eaebec;
+    padding: 10px 45px;
+    border-radius: 10px;
+}
+
+.border-style {
     border-top: 1px dashed gainsboro;
     border-bottom: 1px dashed gainsboro;
 }
-.border-bottom{
+
+.border-bottom {
     border-bottom: 1px dashed gray;
 }
-.border-right{
+
+.border-right {
     border-right: 2px dashed gainsboro;
+}
+
+.list-style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
 }
