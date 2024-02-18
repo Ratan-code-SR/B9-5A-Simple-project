@@ -53,16 +53,27 @@ function displayGrandPrice() {
 
     const applyBtn = findElement("apply-btn");
     applyBtn.addEventListener("click", function (event) {
+        const hidden = findElement("btn-input").parentElement.parentElement;
         const btnInput = findElement("btn-input").value;
-       const validity=  btnInput.split(" ").join("").toUpperCase();
+        const validity = btnInput.split(" ").join("").toUpperCase();
+
         // console.log(value);
         if (convertedTicketPrice === 2200) {
             event.target.setAttribute("disabled", false);
             if (validity === "NEW15") {
                 const discount = convertedTicketPrice - convertedTicketPrice * 15 / 100;
                 setInnerText("grand-price", discount)
+                hidden.classList.add("hidden");
                 // console.log(discount);
                 findElement("btn-input").value = "";
+            }
+            else if (validity === "COUPLE20") {
+                const discount = convertedTicketPrice - convertedTicketPrice * 20 / 100;
+                setInnerText("grand-price", discount)
+                hidden.classList.add("hidden");
+                // console.log(discount);
+                findElement("btn-input").value = "";
+
             } else {
                 alert("Your coupon is invalid");
                 findElement("btn-input").value = "";
@@ -70,6 +81,7 @@ function displayGrandPrice() {
         }
     })
 }
+
 
 
 function setInnerText(Id, value) {
@@ -81,3 +93,34 @@ function findElement(Id) {
     const element = document.getElementById(Id);
     return element;
 }
+
+const successBtn = findElement("successBtn");
+const phoneNumber = findElement("phone-number");
+
+successBtn.addEventListener("click", submitSuccess);
+function submitSuccess() {
+
+    findElement("success").classList.remove("hidden");
+    findElement("header").classList.add("hidden");
+    findElement("main").classList.add("hidden");
+    findElement("footer").classList.add("hidden");
+}
+
+// reset function
+// function continueBtn() {
+//     findElement("success").classList.add("hidden");
+//     findElement("header").classList.remove("hidden");
+//     findElement("main").classList.remove("hidden");
+//     findElement("footer").classList.remove("hidden");
+//     findElement("btn-input").value = "";
+//     findElement("btn-input").value = "";
+//     findElement("total-price").innerText= "";
+//     findElement("grand-price").innerText = "";
+//     findElement("total-seat").innerText = 40;
+//     findElement("seat-count").innerText = 0;
+//    const listItem = findElement("list-item").childNodes;
+//    for(const li of listItem){
+//     li.innerText = "";
+
+//    }
+// }
