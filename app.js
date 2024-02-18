@@ -7,7 +7,14 @@ for (const seatList of seatLists) {
         event.target.classList.add("add-style");
         event.target.setAttribute("disabled", true);
 
-
+        if(seatCount > 4){
+            alert("You are not allowed to purchase more than four seats...!");
+            event.target.classList.remove("add-style");
+            event.target.classList.add("seat-style");
+           return event.target.setAttribute("disabled", true);
+         
+           
+        }
         const totalSeat = document.getElementById("total-seat").innerText;
         const convertedSetNumber = parseInt(totalSeat);
 
@@ -124,3 +131,11 @@ function submitSuccess() {
 
 //    }
 // }
+
+
+scrollToSection("buy-ticket")
+
+function scrollToSection(sectionId) {
+    const  section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+}
