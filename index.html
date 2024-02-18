@@ -10,7 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="w-[1140px] mx-auto">
+<body">
     <!-- header -->
     <header class="w-[1140px] mx-auto">
         <!-- nav section -->
@@ -378,17 +378,50 @@
 
                     </div>
 
-                    <!--  -->
+                    <!-- price and customer details  -->
                     <div class="w-[430px]">
-                        <h2 class="border-bottom p-2">Select your seat</h2>
-                        <div>
-                            <div class="flex gap-5 justify-between items-center">
-                                <h2>seat <span class="ml-2">0</span></h2>
-                                <h2>class</h2>
-                                <h2>price</h2>
+                        <h2 class="text-2xl font-semibold mb-3 ">Select your seat</h2>
+                        <div class="border-bottom"></div>
+                        <div class="p-4  rounded-md mt-5 flex flex-col gap-5 bg-[#eaebec]">
+                            <div class="flex gap-5 justify-between items-center ">
+                                <h2 class="text-2xl font-semibold">seat <span class="ml-1">0</span></h2>
+                                <h2 class="text-2xl font-semibold">class</h2>
+                                <h2 class="text-2xl font-semibold">price</h2>
+                            </div>
+                            <div class=" border-bottom m-4"></div>
+                            <div class="container ">
+                                <h1>this is container</h1>
+                            </div>
+                            <hr>
+                            <div class="flex justify-between items-center">
+                                <h2 class="text-2xl font-semibold ">Total Price</h2>
+                                <h2 class="text-2xl font-semibold ">BDT <span id="ticket-price">500</span></h2>
+                            </div>
+                            <div class="rounded-md bg-white p-3">
+                                <label for="">
+                                    <input class="w-[300px] py-2" type="text" placeholder="Type your Coupon">
+
+                                </label>
+                                <button id="apply-btn" class="bg-green-500 p-3 rounded-lg">Apply</button>
+                            </div>
+
+                            <div class="flex justify-between items-center">
+                                <h2 class="text-2xl font-semibold ">Grand Total</h2>
+                                <h2 class="text-2xl font-semibold ">BDT <span id="grand-price">1200</span></h2>
                             </div>
                         </div>
-
+                        <!-- passenger information -->
+                        <div class="flex flex-col gap-5 mt-5">
+                            <h1>Passenger Name*</h1>
+                            <input class="p-3 w-full rounded-lg" type="text" placeholder="Enter your name ">
+                            <h1>Phone Number*</h1>
+                            <input id="phone-number" class="p-3 w-full rounded-lg" type="number"
+                                placeholder="Enter your name ">
+                            <h1>Email ID</h1>
+                            <input class="p-3 w-full rounded-lg" type="email" placeholder="Enter your name ">
+                            <button class="bg-green-500 w-full p-3 rounded-lg text-white text-2xl" disabled>
+                                Next</button>
+                        </div>
                     </div>
                 </div>
 
@@ -451,6 +484,6 @@
     </footer>
 
     <script src="app.js"></script>
-</body>
+    </body>
 
 </html>
