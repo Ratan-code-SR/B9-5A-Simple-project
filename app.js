@@ -7,13 +7,13 @@ for (const seatList of seatLists) {
         event.target.classList.add("add-style");
         event.target.setAttribute("disabled", true);
 
-        if(seatCount > 4){
+        if (seatCount > 4) {
             alert("You are not allowed to purchase more than four seats...!");
             event.target.classList.remove("add-style");
             event.target.classList.add("seat-style");
-           return event.target.setAttribute("disabled", true);
-         
-           
+            return event.target.setAttribute("disabled", true);
+
+
         }
         const totalSeat = document.getElementById("total-seat").innerText;
         const convertedSetNumber = parseInt(totalSeat);
@@ -69,16 +69,18 @@ function displayGrandPrice() {
             event.target.setAttribute("disabled", false);
             if (validity === "NEW15") {
                 const discount = convertedTicketPrice - convertedTicketPrice * 15 / 100;
+                discountPrice(convertedTicketPrice, discount);
                 setInnerText("grand-price", discount)
                 hidden.classList.add("hidden");
-                // console.log(discount);
+
                 findElement("btn-input").value = "";
             }
             else if (validity === "COUPLE20") {
                 const discount = convertedTicketPrice - convertedTicketPrice * 20 / 100;
+                discountPrice(convertedTicketPrice, discount);
                 setInnerText("grand-price", discount)
                 hidden.classList.add("hidden");
-                // console.log(discount);
+              
                 findElement("btn-input").value = "";
 
             } else {
@@ -128,14 +130,20 @@ function submitSuccess() {
 //    const listItem = findElement("list-item").childNodes;
 //    for(const li of listItem){
 //     li.innerText = "";
-
 //    }
 // }
 
-
+// ticket scrolling
 scrollToSection("buy-ticket")
-
 function scrollToSection(sectionId) {
-    const  section = document.getElementById(sectionId);
+    const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: 'smooth' });
+}
+
+// discount price function
+function discountPrice(total, dis) {
+    const parentDiv = findElement("btn-input").parentElement.parentElement.parentElement;
+    const p = document.createElement("p");
+    p.innerText = `Discount Price : ${parseInt((total - dis))}/-`;
+    parentDiv.appendChild(p);
 }
