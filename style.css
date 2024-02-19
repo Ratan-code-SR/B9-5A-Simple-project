@@ -69,3 +69,8 @@
     align-items: center;
     font-size: 20px;
 }
+.para-style{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}

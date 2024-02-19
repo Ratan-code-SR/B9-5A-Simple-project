@@ -127,6 +127,7 @@ function scrollToSection(sectionId) {
 function discountPrice(total, dis) {
     const parentDiv = findElement("btn-input").parentElement.parentElement.parentElement;
     const p = document.createElement("p");
-    p.innerText = `Discount Price : ${parseInt((total - dis))}/-`;
+    p.innerText = `Discount Price : ${parseInt((total - dis))} /-`;
+    p.classList.add("para-style");
     parentDiv.appendChild(p);
 }
