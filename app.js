@@ -62,12 +62,12 @@ function displayGrandPrice() {
     applyBtn.addEventListener("click", function (event) {
         const hidden = findElement("btn-input").parentElement.parentElement;
         const btnInput = findElement("btn-input").value;
-        const validity = btnInput.split(" ").join("").toUpperCase();
+        // const validity = btnInput.split(" ").join("").toUpperCase();
 
-        // console.log(value);
+       
         if (convertedTicketPrice === 2200) {
             event.target.setAttribute("disabled", false);
-            if (validity === "NEW15") {
+            if (btnInput === "NEW15") {
                 const discount = convertedTicketPrice - convertedTicketPrice * 15 / 100;
                 discountPrice(convertedTicketPrice, discount);
                 setInnerText("grand-price", discount)
@@ -75,7 +75,7 @@ function displayGrandPrice() {
 
                 findElement("btn-input").value = "";
             }
-            else if (validity === "COUPLE20") {
+            else if (btnInput === "Couple 20") {
                 const discount = convertedTicketPrice - convertedTicketPrice * 20 / 100;
                 discountPrice(convertedTicketPrice, discount);
                 setInnerText("grand-price", discount)
@@ -115,23 +115,6 @@ function submitSuccess() {
     findElement("footer").classList.add("hidden");
 }
 
-// reset function
-// function continueBtn() {
-//     findElement("success").classList.add("hidden");
-//     findElement("header").classList.remove("hidden");
-//     findElement("main").classList.remove("hidden");
-//     findElement("footer").classList.remove("hidden");
-//     findElement("btn-input").value = "";
-//     findElement("btn-input").value = "";
-//     findElement("total-price").innerText= "";
-//     findElement("grand-price").innerText = "";
-//     findElement("total-seat").innerText = 40;
-//     findElement("seat-count").innerText = 0;
-//    const listItem = findElement("list-item").childNodes;
-//    for(const li of listItem){
-//     li.innerText = "";
-//    }
-// }
 
 // ticket scrolling
 scrollToSection("buy-ticket")

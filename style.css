@@ -22,7 +22,7 @@
     width: 100%;
     background-size: cover;
     background-size: cover;
- 
+
 }
 
 .seat-style {
@@ -30,6 +30,7 @@
     width: 120px;
     padding: 12px;
     border-radius: 10px;
+    
 }
 
 .add-style {
@@ -57,7 +58,8 @@
 .border-right {
     border-right: 2px dashed gainsboro;
 }
-.border-top{
+
+.border-top {
     border-top: 2px dashed #b8a6a675;
 }
 
