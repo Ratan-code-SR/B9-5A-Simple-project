@@ -24,7 +24,7 @@ for (const seatList of seatLists) {
         const p1 = document.createElement("p");
         p1.innerText = seatList.innerText;
         const p2 = document.createElement("p");
-        p2.innerText = "Economic";
+        p2.innerText = "economic";
         const p3 = document.createElement("p");
         p3.innerText = 550;
         li.appendChild(p1);
