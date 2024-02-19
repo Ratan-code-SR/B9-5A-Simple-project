@@ -27,7 +27,15 @@
 
 .seat-style {
     background-color: #eaebec;
-    width: 120px;
+    width: 100px;
+    padding: 12px;
+    border-radius: 10px;
+    
+}
+
+.seat-number-style {
+    background-color: green;
+    width: 40px;
     padding: 12px;
     border-radius: 10px;
     
@@ -35,7 +43,7 @@
 
 .add-style {
     background-color: green;
-    width: 120px;
+    width: 100px;
     padding: 12px;
     border-radius: 10px;
 }
